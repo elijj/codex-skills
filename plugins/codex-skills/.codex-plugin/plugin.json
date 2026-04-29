@@ -1,0 +1,11 @@
+{
+  "name": "codex-skills",
+  "version": "0.1.0",
+  "description": "reusable Codex skill library",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Skills",
+    "shortDescription": "reusable Codex skills for local workflows",
+    "capabilities": ["Interactive", "Read", "Write"]
+  }
+}

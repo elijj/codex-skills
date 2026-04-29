@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I keep repeating the same incident-response workflow in Codex. Turn it into a reusable skill with a SKILL.md, scripts folder if useful, and clear trigger wording.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you update my existing skill at /tmp/skills/pr-reviewer? It under-triggers when I ask for security-oriented PR reviews, and I want a better description plus a few eval prompts.",
+    "should_trigger": true
+  },
+  {
+    "query": "I have notes from a manual spreadsheet cleanup process. Build a Codex skill from them, include helper scripts if repeated parsing is needed, and validate the final skill folder.",
+    "should_trigger": true
+  },
+  {
+    "query": "Please compare two versions of this skill and tell me if the new one is actually better. I want test prompts, benchmark results, and a human review page.",
+    "should_trigger": true
+  },
+  {
+    "query": "The skill I wrote works only for my sample prompt. Help me generalize it, create proper evals, run with-skill and baseline passes, then iterate on the failures.",
+    "should_trigger": true
+  },
+  {
+    "query": "Package the local Codex skill in ./skills/docx-helper as a .skill file and make sure its frontmatter and metadata are valid first.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add agents/openai.yaml to this skill. I need a display name, short description, icon paths, and a default prompt that matches the SKILL.md.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create an eval set to test whether my skill description triggers for the right user requests but avoids near-miss tasks. Then run the optimizer for a few iterations.",
+    "should_trigger": true
+  },
+  {
+    "query": "Convert this internal runbook into a Codex skill, but keep the SKILL.md lean and move the long policy details into references files.",
+    "should_trigger": true
+  },
+  {
+    "query": "Forward-test this skill with realistic user requests. I want outputs saved per eval case and a viewer I can use to leave feedback.",
+    "should_trigger": true
+  },
+  {
+    "query": "Package my Python project as a wheel, update pyproject.toml metadata, and publish the build artifact to our private package index.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a stronger system prompt for a customer support bot. I do not need a Codex skill or any files, just the prompt text.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run our model eval harness on the latest summarization outputs and plot accuracy over time. The evals are in tests/eval_summaries.jsonl.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a GitHub Actions workflow that validates YAML frontmatter in markdown docs across this repository.",
+    "should_trigger": false
+  },
+  {
+    "query": "Design a Codex plugin marketplace entry with plugin.json and README text for a local extension I am building.",
+    "should_trigger": false
+  },
+  {
+    "query": "I need a README for a folder named skills that explains our team's onboarding workshops, not Codex skills.",
+    "should_trigger": false
+  },
+  {
+    "query": "Optimize the description for this npm package so it ranks better in search results. It is not an AI skill.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make a simple browser UI for reviewing CSV cleanup outputs. Use static HTML, but there is no skill evaluation workflow involved.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit the security of a helper script that zips folders. I am worried about path traversal in archive extraction.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a reusable shell script template for new repositories with lint, test, and format commands.",
+    "should_trigger": false
+  }
+]
