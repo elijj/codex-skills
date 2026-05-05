@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Keep this change surgical and do not overdo the refactor.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use Karpathy guidelines while fixing this bug.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make the minimal safe change for this feature request.",
+    "should_trigger": true
+  },
+  {
+    "query": "This task is ambiguous; surface assumptions before coding.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor this function but avoid speculative abstractions.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix the bug with a reproducer and preserve existing style.",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a simple, scoped implementation with concrete verification.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add logging only where needed and leave unrelated cleanup alone.",
+    "should_trigger": true
+  },
+  {
+    "query": "The code is risky; be conservative and prove the outcome.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use a small plan with verify steps before editing.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a full PRP artifact under .codex/prps/plans.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the build-fix loop on these compiler errors.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a GitHub pull request from this branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write Playwright tests for login and upload.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude command into a Codex workflow.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit the currently staged files.",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a market research report on developer tools.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a hero image for a landing page.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit this OAuth flow for security vulnerabilities only.",
+    "should_trigger": false
+  },
+  {
+    "query": "List installable skills for browser automation.",
+    "should_trigger": false
+  }
+]

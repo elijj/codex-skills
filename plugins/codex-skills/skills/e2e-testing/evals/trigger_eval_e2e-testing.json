@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/e2e Add Playwright coverage for product search.",
+    "should_trigger": true
+  },
+  {
+    "query": "Debug this flaky Playwright test in CI.",
+    "should_trigger": true
+  },
+  {
+    "query": "Set up Playwright config and CI artifacts.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add browser coverage for login and checkout.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create Page Object Models for repeated E2E flows.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make failures leave screenshots, videos, traces, and an HTML report.",
+    "should_trigger": true
+  },
+  {
+    "query": "Stabilize a test that waits for the submit button.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write end-to-end tests for the onboarding user journey.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review our Playwright selectors and artifact settings.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add CI-safe Playwright defaults for this app.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use TDD to add unit tests for the parser.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix TypeScript build errors.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a PRP plan artifact.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement an existing plan file.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit current changes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a GitHub pull request.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude workflow into Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a conversational implementation plan.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write backend integration tests without a browser flow.",
+    "should_trigger": false
+  }
+]

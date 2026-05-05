@@ -1,0 +1,3 @@
+interface:
+  display_name: "PRP Plan"
+  short_description: "Create self-contained PRP implementation plans"

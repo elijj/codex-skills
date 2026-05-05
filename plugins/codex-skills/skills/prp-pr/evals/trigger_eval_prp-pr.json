@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/prp-pr --draft main",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a GitHub pull request from the current branch.",
+    "should_trigger": true
+  },
+  {
+    "query": "Push this branch with upstream tracking and open a PR.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make the PR body follow our GitHub template.",
+    "should_trigger": true
+  },
+  {
+    "query": "Analyze commits and files into a PR title and body.",
+    "should_trigger": true
+  },
+  {
+    "query": "Open a draft PR and include PRP artifacts.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use gh pr create for this feature branch.",
+    "should_trigger": true
+  },
+  {
+    "query": "Check whether a PR already exists for this branch.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a pull request against develop.",
+    "should_trigger": true
+  },
+  {
+    "query": "Prepare the PR summary and testing section from commits.",
+    "should_trigger": true
+  },
+  {
+    "query": "Commit these changes first.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review PR #42 without posting.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a PRP plan artifact.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement a .codex/prps plan.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the failing build.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright test coverage.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write tests first for the bug.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan the architecture and wait.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude command into Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize recent commits without creating a PR.",
+    "should_trigger": false
+  }
+]

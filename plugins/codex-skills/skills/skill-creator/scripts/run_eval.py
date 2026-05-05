@@ -97,6 +97,52 @@ def offline_should_trigger(query: str, skill_name: str, skill_description: str) 
     return "skill" in query_terms and len(overlap) >= 2
 
 
+def parse_trigger_result(text: str) -> bool | None:
+    """Parse a trigger decision from a single text blob.
+
+    Returns None when the text does not contain a recoverable trigger result.
+    """
+    stripped = text.strip()
+    if not stripped:
+        return None
+
+    try:
+        parsed = json.loads(stripped)
+    except json.JSONDecodeError:
+        parsed = None
+
+    if isinstance(parsed, dict) and isinstance(parsed.get("trigger"), bool):
+        return parsed["trigger"]
+
+    # Codex can echo the classifier prompt in logs. Only accept whole JSON
+    # lines that parse cleanly and agree with one another; inline fragments are
+    # treated as noise instead of as a classifier result.
+    json_candidates: list[bool] = []
+    for line in stripped.splitlines():
+        candidate = line.strip()
+        if not candidate.startswith("{") or not candidate.endswith("}"):
+            continue
+        try:
+            parsed = json.loads(candidate)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(parsed, dict) and isinstance(parsed.get("trigger"), bool):
+            json_candidates.append(parsed["trigger"])
+
+    if len(set(json_candidates)) == 1:
+        return json_candidates[0]
+    return None
+
+
+def resolve_trigger_result(output_text: str, stdout_text: str) -> bool:
+    """Resolve a trigger decision from the dedicated output artifact first."""
+    for candidate in (output_text, stdout_text):
+        parsed = parse_trigger_result(candidate)
+        if parsed is not None:
+            return parsed
+    raise ValueError("Could not parse trigger result from output artifact or stdout")
+
+
 def run_single_query(
     query: str,
     skill_name: str,
@@ -154,23 +200,16 @@ def run_single_query(
         if output_path.exists():
             output_text = output_path.read_text(errors="replace")
 
-        combined = "\n".join([output_text, result.stdout or "", result.stderr or ""]).strip()
         if result.returncode != 0:
             raise RuntimeError(f"codex exec exited {result.returncode}: {result.stderr}")
 
         try:
-            parsed = json.loads(combined)
-            if isinstance(parsed, dict) and isinstance(parsed.get("trigger"), bool):
-                return parsed["trigger"]
-        except json.JSONDecodeError:
-            pass
-
-        lowered = combined.lower()
-        if '"trigger": true' in lowered or "trigger: true" in lowered:
-            return True
-        if '"trigger": false' in lowered or "trigger: false" in lowered:
-            return False
-        raise ValueError(f"Could not parse trigger result: {combined[:500]}")
+            return resolve_trigger_result(output_text, result.stdout or "")
+        except ValueError as exc:
+            preview = "\n".join(
+                part for part in [output_text.strip(), (result.stdout or "").strip()] if part
+            )
+            raise ValueError(f"Could not parse trigger result: {preview[:500]}") from exc
     finally:
         import shutil
 

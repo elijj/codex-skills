@@ -1,0 +1,59 @@
+{
+  "skill_name": "implementation-planning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/plan Add real-time notifications when markets resolve. Include likely files, risks, dependencies, and wait for approval.",
+      "expected_output": "Produces a structured implementation plan with requirements, phases, risks, testing, success criteria, and an explicit waiting-for-confirmation line; does not edit files.",
+      "files": [],
+      "assertions": [
+        "Produces the required Implementation Plan structure with Requirements Restatement, Assumptions, Architecture Changes, Implementation Phases, Testing Strategy, Risks & Mitigations, and Success Criteria.",
+        "Includes a confirmation gate that explicitly waits for the user before code edits.",
+        "Performs or describes only read-only exploration before the confirmation gate.",
+        "Does not create, modify, or delete repository files before confirmation."
+      ],
+      "expectations": [
+        "Produces the required Implementation Plan structure with Requirements Restatement, Assumptions, Architecture Changes, Implementation Phases, Testing Strategy, Risks & Mitigations, and Success Criteria.",
+        "Includes a confirmation gate that explicitly waits for the user before code edits.",
+        "Performs or describes only read-only exploration before the confirmation gate.",
+        "Does not create, modify, or delete repository files before confirmation."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Split our 900-line billing service into smaller modules without changing behavior.",
+      "expected_output": "Activates planning behavior on a plain implementation request, inspects relevant code paths, creates an incremental refactor plan with rollback risk, tests before/after, file-oriented phases, and waits for confirmation.",
+      "files": [],
+      "assertions": [
+        "Produces the required Implementation Plan structure with Requirements Restatement, Assumptions, Architecture Changes, Implementation Phases, Testing Strategy, Risks & Mitigations, and Success Criteria.",
+        "Includes a confirmation gate that explicitly waits for the user before code edits.",
+        "Performs or describes only read-only exploration before the confirmation gate.",
+        "Does not create, modify, or delete repository files before confirmation."
+      ],
+      "expectations": [
+        "Produces the required Implementation Plan structure with Requirements Restatement, Assumptions, Architecture Changes, Implementation Phases, Testing Strategy, Risks & Mitigations, and Success Criteria.",
+        "Includes a confirmation gate that explicitly waits for the user before code edits.",
+        "Performs or describes only read-only exploration before the confirmation gate.",
+        "Does not create, modify, or delete repository files before confirmation."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I need OAuth login with GitHub and Google. Inspect existing auth patterns and propose a plan, but don't implement yet.",
+      "expected_output": "Uses read-only exploration, identifies assumptions and auth risks, proposes phased implementation and validation checks, and stops before code changes.",
+      "files": [],
+      "assertions": [
+        "Produces the required Implementation Plan structure with Requirements Restatement, Assumptions, Architecture Changes, Implementation Phases, Testing Strategy, Risks & Mitigations, and Success Criteria.",
+        "Includes a confirmation gate that explicitly waits for the user before code edits.",
+        "Performs or describes only read-only exploration before the confirmation gate.",
+        "Does not create, modify, or delete repository files before confirmation."
+      ],
+      "expectations": [
+        "Produces the required Implementation Plan structure with Requirements Restatement, Assumptions, Architecture Changes, Implementation Phases, Testing Strategy, Risks & Mitigations, and Success Criteria.",
+        "Includes a confirmation gate that explicitly waits for the user before code edits.",
+        "Performs or describes only read-only exploration before the confirmation gate.",
+        "Does not create, modify, or delete repository files before confirmation."
+      ]
+    }
+  ]
+}

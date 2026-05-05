@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Convert this Claude Code skill into a Codex skill with full parity.",
+    "should_trigger": true
+  },
+  {
+    "query": "Port a Claude slash command and its planner agent into a Codex skill.",
+    "should_trigger": true
+  },
+  {
+    "query": "Migrate these Cursor alwaysApply rules into Codex skill behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make this Roo custom mode usable as a Codex skill.",
+    "should_trigger": true
+  },
+  {
+    "query": "Bring over this Claude workflow with hooks and MCP assumptions into Codex.",
+    "should_trigger": true
+  },
+  {
+    "query": "Translate this prompt pack into a skill under plugins/codex-skills.",
+    "should_trigger": true
+  },
+  {
+    "query": "Convert a Cline rule pack to Codex and preserve ambient behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "Port a Claude agent workflow but do not assume child agents exist.",
+    "should_trigger": true
+  },
+  {
+    "query": "I need source-harness parity for these commands, hooks, and rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this external agent runbook into a Codex-native skill with a parity ledger.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a PRP plan for a new billing feature.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix my TypeScript build errors one at a time.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this PR for correctness and security.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright E2E tests for checkout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit only the auth files with a conventional message.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a normal implementation plan and wait for approval.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement this existing .codex/prps plan.",
+    "should_trigger": false
+  },
+  {
+    "query": "Apply the Karpathy guidelines while editing this parser.",
+    "should_trigger": false
+  },
+  {
+    "query": "Package this npm library and publish it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write docs for our migration process.",
+    "should_trigger": false
+  }
+]

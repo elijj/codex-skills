@@ -1,0 +1,3 @@
+interface:
+  display_name: "TDD Workflow"
+  short_description: "Implement changes with strict TDD evidence"

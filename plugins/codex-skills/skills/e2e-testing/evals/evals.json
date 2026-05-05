@@ -1,0 +1,85 @@
+{
+  "skill_name": "e2e-testing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/e2e Add Playwright coverage for a user searching products, opening a product detail page, and returning to results.",
+      "expected_output": "Uses existing Playwright patterns, proposes or writes resilient selectors and a focused test, runs the relevant target, and reports artifacts.",
+      "files": [],
+      "assertions": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ],
+      "expectations": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "This Playwright test flakes in CI because the submit button is sometimes missing. Debug and stabilize it.",
+      "expected_output": "Characterizes flake risk, replaces brittle waits/selectors with specific readiness checks, reruns the test, and reports remaining risk.",
+      "files": [],
+      "assertions": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ],
+      "expectations": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Set up Playwright config and CI artifacts for a new app.",
+      "expected_output": "Creates a config with retries, reporters, screenshots/videos/traces, webServer settings when appropriate, and CI artifact upload guidance.",
+      "files": [],
+      "assertions": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ],
+      "expectations": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Add CI-safe Playwright defaults for a new app and make sure failures leave useful artifacts.",
+      "expected_output": "Includes reporters, retries, screenshots, videos, traces, optional webServer, and CI artifact upload guidance in the config or review output.",
+      "files": [],
+      "assertions": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ],
+      "expectations": [
+        "Uses Playwright-oriented structure, resilient locators, and user-visible assertions.",
+        "Runs the smallest relevant E2E command first or explains why it cannot run.",
+        "Reports diagnostic artifacts such as HTML report, screenshots, videos, traces, console, or network notes.",
+        "For flaky tests, characterizes the failure and replaces brittle waits/selectors with specific readiness signals.",
+        "Uses e2e-testing scope only for browser user flows, not unit-only or generic TDD work."
+      ]
+    }
+  ]
+}

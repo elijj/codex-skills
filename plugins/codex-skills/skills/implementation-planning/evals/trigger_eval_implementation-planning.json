@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/plan Add real-time notifications and wait for approval.",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan this migration before touching code.",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me an implementation plan with risks and tests.",
+    "should_trigger": true
+  },
+  {
+    "query": "Inspect the repo and propose a phased refactor plan, but do not implement.",
+    "should_trigger": true
+  },
+  {
+    "query": "I want requirements restated and a confirmation gate before code changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan the architecture change for OAuth providers.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a conversational plan for splitting this service.",
+    "should_trigger": true
+  },
+  {
+    "query": "Before coding, outline dependencies, files, and verification.",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me decide an implementation approach for this high-risk change.",
+    "should_trigger": true
+  },
+  {
+    "query": "Analyze ambiguity and stop for confirmation before editing.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a PRP plan artifact under .codex/prps/plans for later execution.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute this existing plan file step by step.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write failing tests first and implement the parser fix.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review local changes before commit.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the build errors reported by CI.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a pull request with gh.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit everything except tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright coverage for checkout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude skill into Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make a quick typo fix now.",
+    "should_trigger": false
+  }
+]

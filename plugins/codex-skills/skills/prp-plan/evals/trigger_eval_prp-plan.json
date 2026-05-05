@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/prp-plan Add usage-based billing limits.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a PRP plan from docs/notifications.prd.md.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make a self-contained implementation plan artifact for auth migration.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a .codex/prps plan with validation commands.",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a PRP that captures codebase patterns before implementation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Produce a plan file that prp-implement can execute later.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this PRD into the next pending phase plan.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create an artifact-producing plan with mandatory reading.",
+    "should_trigger": true
+  },
+  {
+    "query": "Generate a PRP for replacing our search provider.",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan this feature deeply and save the plan under .codex/prps/plans.",
+    "should_trigger": true
+  },
+  {
+    "query": "/plan Give me a conversational implementation plan and wait.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute .codex/prps/plans/add-billing.plan.md.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit the PRP files.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a GitHub pull request.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this implementation plan for bugs.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix build errors in the current branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write failing tests first for a parser bug.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright E2E tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude skill into Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize the PRD without creating files.",
+    "should_trigger": false
+  }
+]

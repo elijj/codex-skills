@@ -1,0 +1,85 @@
+{
+  "skill_name": "code-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/code-review Review my local changes before I commit. Focus on correctness and security.",
+      "expected_output": "Inspects local diff, reads changed files, lists findings first by severity with file references, and includes validation results.",
+      "files": [],
+      "assertions": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ],
+      "expectations": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review PR #42 and tell me whether to approve or request changes. Don't post to GitHub yet.",
+      "expected_output": "Uses PR mode, fetches metadata/diff if gh is available, reviews full context, reports decision locally, and does not publish.",
+      "files": [],
+      "assertions": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ],
+      "expectations": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "This is a docs-only diff. Run a lighter review but still catch broken examples or misleading instructions.",
+      "expected_output": "Adjusts review scope for docs/config, focuses on correctness and examples, and avoids irrelevant production-code checks.",
+      "files": [],
+      "assertions": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ],
+      "expectations": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Review the PR for branch feature/auth-hardening, but don't post anything to GitHub.",
+      "expected_output": "Uses PR review mode, finds the PR by branch name with gh when available, reviews locally, and does not publish.",
+      "files": [],
+      "assertions": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ],
+      "expectations": [
+        "Findings appear before summaries and are ordered by severity.",
+        "Each finding includes a file/line reference when available, impact, and suggested fix.",
+        "Review covers correctness, security, type safety, tests, performance, and maintainability as relevant to the diff.",
+        "Does not post to GitHub unless the prompt explicitly asks for posting.",
+        "Includes validation commands run or explicitly says why validation was skipped."
+      ]
+    }
+  ]
+}

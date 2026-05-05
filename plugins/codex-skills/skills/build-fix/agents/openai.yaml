@@ -1,0 +1,3 @@
+interface:
+  display_name: "Build Fix"
+  short_description: "Fix build errors incrementally"

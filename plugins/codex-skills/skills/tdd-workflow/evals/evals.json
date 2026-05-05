@@ -1,0 +1,77 @@
+{
+  "skill_name": "tdd-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/tdd Fix the parser bug where an empty CSV row crashes the import.",
+      "expected_output": "Adds or proposes a failing parser test first, verifies RED for the intended crash, implements the minimal fix, reruns the same test to GREEN, and reports evidence.",
+      "files": [],
+      "assertions": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ],
+      "expectations": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Add a new API endpoint for user notification preferences using test-driven development.",
+      "expected_output": "Plans unit/integration coverage, writes endpoint tests before implementation, implements only enough to pass, and reports coverage or why coverage could not be measured.",
+      "files": [],
+      "assertions": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ],
+      "expectations": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Refactor the checkout calculation without changing behavior.",
+      "expected_output": "Activates the TDD workflow on a plain refactor request, captures behavior with tests before refactor, records explicit RED and GREEN commands/results, avoids behavior changes, and reports coverage or why it could not be measured.",
+      "files": [],
+      "assertions": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ],
+      "expectations": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Make the auth flow safe, and include checkpoint commits if this repo is under git.",
+      "expected_output": "Creates test, fix, and optional refactor checkpoints with commit evidence when requested, and reports the RED, GREEN, and refactor commands/results.",
+      "files": [],
+      "assertions": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ],
+      "expectations": [
+        "Reports a RED command and the intended failure reason before production-code changes.",
+        "Reports the GREEN command and pass result after the minimal implementation.",
+        "Includes refactor or coverage verification, or explains why coverage could not be measured.",
+        "Scales unit, integration, and E2E coverage to risk without claiming 80% coverage unless measured."
+      ]
+    }
+  ]
+}

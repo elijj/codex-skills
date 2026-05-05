@@ -1,0 +1,3 @@
+interface:
+  display_name: "PRP Commit"
+  short_description: "Stage targeted changes and commit them"

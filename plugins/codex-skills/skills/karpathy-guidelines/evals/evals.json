@@ -1,0 +1,59 @@
+{
+  "skill_name": "karpathy-guidelines",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Add an export feature for user data to this service.",
+      "expected_output": "Activates the behavior layer on a normal coding task, states assumptions if scope is unclear, chooses a minimal path, and gives a short Step -> verify plan with concrete checks.",
+      "files": [],
+      "assertions": [
+        "States assumptions or scope uncertainty before choosing an implementation path when the request is broad.",
+        "Uses the smallest change that satisfies the prompt and avoids speculative abstractions.",
+        "Defines concrete verification evidence such as tests, build commands, screenshots, or reproduction steps.",
+        "Mentions unrelated cleanup separately instead of changing unrelated files."
+      ],
+      "expectations": [
+        "States assumptions or scope uncertainty before choosing an implementation path when the request is broad.",
+        "Uses the smallest change that satisfies the prompt and avoids speculative abstractions.",
+        "Defines concrete verification evidence such as tests, build commands, screenshots, or reproduction steps.",
+        "Mentions unrelated cleanup separately instead of changing unrelated files."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Fix the sorting bug where two users with the same score sometimes show in the wrong order.",
+      "expected_output": "Proposes or writes a reproducing test first, makes the smallest fix, and verifies the failing case now passes.",
+      "files": [],
+      "assertions": [
+        "States assumptions or scope uncertainty before choosing an implementation path when the request is broad.",
+        "Uses the smallest change that satisfies the prompt and avoids speculative abstractions.",
+        "Defines concrete verification evidence such as tests, build commands, screenshots, or reproduction steps.",
+        "Mentions unrelated cleanup separately instead of changing unrelated files."
+      ],
+      "expectations": [
+        "States assumptions or scope uncertainty before choosing an implementation path when the request is broad.",
+        "Uses the smallest change that satisfies the prompt and avoids speculative abstractions.",
+        "Defines concrete verification evidence such as tests, build commands, screenshots, or reproduction steps.",
+        "Mentions unrelated cleanup separately instead of changing unrelated files."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Add logging to the upload function in this old file.",
+      "expected_output": "Touches only the logging-related lines, preserves local style, avoids unrelated refactors, and mentions any unrelated cleanup separately.",
+      "files": [],
+      "assertions": [
+        "States assumptions or scope uncertainty before choosing an implementation path when the request is broad.",
+        "Uses the smallest change that satisfies the prompt and avoids speculative abstractions.",
+        "Defines concrete verification evidence such as tests, build commands, screenshots, or reproduction steps.",
+        "Mentions unrelated cleanup separately instead of changing unrelated files."
+      ],
+      "expectations": [
+        "States assumptions or scope uncertainty before choosing an implementation path when the request is broad.",
+        "Uses the smallest change that satisfies the prompt and avoids speculative abstractions.",
+        "Defines concrete verification evidence such as tests, build commands, screenshots, or reproduction steps.",
+        "Mentions unrelated cleanup separately instead of changing unrelated files."
+      ]
+    }
+  ]
+}

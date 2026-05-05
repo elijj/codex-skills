@@ -1,0 +1,65 @@
+{
+  "skill_name": "prp-commit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/prp-commit the auth changes",
+      "expected_output": "Inspects git status/diff, identifies auth-related files, stages only those files with explanation, creates a conventional commit, and reports hash/message/files.",
+      "files": [],
+      "assertions": [
+        "Runs git status --short and summarizes changed files before staging.",
+        "Stages only the requested target set, or uses already staged files without adding more when requested.",
+        "Creates a single-line conventional commit in imperative mood under 72 characters when feasible.",
+        "Reports commit hash, message, committed files, and suggested next step.",
+        "Does not include unrelated files in a targeted commit."
+      ],
+      "expectations": [
+        "Runs git status --short and summarizes changed files before staging.",
+        "Stages only the requested target set, or uses already staged files without adding more when requested.",
+        "Creates a single-line conventional commit in imperative mood under 72 characters when feasible.",
+        "Reports commit hash, message, committed files, and suggested next step.",
+        "Does not include unrelated files in a targeted commit."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Commit everything except tests with a good conventional commit message.",
+      "expected_output": "Stages all non-test changes, verifies staged diff, writes an imperative conventional commit, and reports result.",
+      "files": [],
+      "assertions": [
+        "Runs git status --short and summarizes changed files before staging.",
+        "Stages only the requested target set, or uses already staged files without adding more when requested.",
+        "Creates a single-line conventional commit in imperative mood under 72 characters when feasible.",
+        "Reports commit hash, message, committed files, and suggested next step.",
+        "Does not include unrelated files in a targeted commit."
+      ],
+      "expectations": [
+        "Runs git status --short and summarizes changed files before staging.",
+        "Stages only the requested target set, or uses already staged files without adding more when requested.",
+        "Creates a single-line conventional commit in imperative mood under 72 characters when feasible.",
+        "Reports commit hash, message, committed files, and suggested next step.",
+        "Does not include unrelated files in a targeted commit."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use whatever is already staged and commit it.",
+      "expected_output": "Does not stage additional files, commits the staged set only, and reports no unstaged files were included.",
+      "files": [],
+      "assertions": [
+        "Runs git status --short and summarizes changed files before staging.",
+        "Stages only the requested target set, or uses already staged files without adding more when requested.",
+        "Creates a single-line conventional commit in imperative mood under 72 characters when feasible.",
+        "Reports commit hash, message, committed files, and suggested next step.",
+        "Does not include unrelated files in a targeted commit."
+      ],
+      "expectations": [
+        "Runs git status --short and summarizes changed files before staging.",
+        "Stages only the requested target set, or uses already staged files without adding more when requested.",
+        "Creates a single-line conventional commit in imperative mood under 72 characters when feasible.",
+        "Reports commit hash, message, committed files, and suggested next step.",
+        "Does not include unrelated files in a targeted commit."
+      ]
+    }
+  ]
+}

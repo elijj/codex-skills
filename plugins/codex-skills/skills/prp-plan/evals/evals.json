@@ -1,0 +1,61 @@
+{
+  "skill_name": "prp-plan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/prp-plan Add usage-based billing limits to this app. Produce a plan artifact with codebase patterns and validation commands.",
+      "expected_output": "Explores the codebase, writes a self-contained `.codex/prps/plans/*.plan.md` artifact, includes files, tasks, tests, validations, risks, and next-step guidance.",
+      "files": [],
+      "assertions": [
+        "Writes or instructs creation of a plan artifact under .codex/prps/plans/ with a kebab-case .plan.md filename.",
+        "Includes codebase pattern observations, mandatory reading, files to change, ordered tasks, validation commands, risks, and acceptance criteria.",
+        "When a PRD fixture has pending phases, selects the next pending phase and records a PRD back-reference.",
+        "Uses .codex/prps/ paths and does not write to source-harness .claude/PRPs/ paths."
+      ],
+      "expectations": [
+        "Writes or instructs creation of a plan artifact under .codex/prps/plans/ with a kebab-case .plan.md filename.",
+        "Includes codebase pattern observations, mandatory reading, files to change, ordered tasks, validation commands, risks, and acceptance criteria.",
+        "When a PRD fixture has pending phases, selects the next pending phase and records a PRD back-reference.",
+        "Uses .codex/prps/ paths and does not write to source-harness .claude/PRPs/ paths."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Create a PRP plan from docs/notifications.prd.md and pick the next pending phase.",
+      "expected_output": "Parses the PRD, selects the next pending eligible phase, produces a plan artifact scoped to that phase, and updates or reports an exact PRD back-reference to the new plan.",
+      "files": [
+        "evals/fixtures/docs/notifications.prd.md"
+      ],
+      "assertions": [
+        "Writes or instructs creation of a plan artifact under .codex/prps/plans/ with a kebab-case .plan.md filename.",
+        "Includes codebase pattern observations, mandatory reading, files to change, ordered tasks, validation commands, risks, and acceptance criteria.",
+        "When a PRD fixture has pending phases, selects the next pending phase and records a PRD back-reference.",
+        "Uses .codex/prps/ paths and does not write to source-harness .claude/PRPs/ paths."
+      ],
+      "expectations": [
+        "Writes or instructs creation of a plan artifact under .codex/prps/plans/ with a kebab-case .plan.md filename.",
+        "Includes codebase pattern observations, mandatory reading, files to change, ordered tasks, validation commands, risks, and acceptance criteria.",
+        "When a PRD fixture has pending phases, selects the next pending phase and records a PRD back-reference.",
+        "Uses .codex/prps/ paths and does not write to source-harness .claude/PRPs/ paths."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Make a PRP for replacing our auth provider. Capture existing auth patterns before planning.",
+      "expected_output": "Searches for current auth patterns, documents mandatory reading, captures risks, and outputs a validation-ready plan.",
+      "files": [],
+      "assertions": [
+        "Writes or instructs creation of a plan artifact under .codex/prps/plans/ with a kebab-case .plan.md filename.",
+        "Includes codebase pattern observations, mandatory reading, files to change, ordered tasks, validation commands, risks, and acceptance criteria.",
+        "When a PRD fixture has pending phases, selects the next pending phase and records a PRD back-reference.",
+        "Uses .codex/prps/ paths and does not write to source-harness .claude/PRPs/ paths."
+      ],
+      "expectations": [
+        "Writes or instructs creation of a plan artifact under .codex/prps/plans/ with a kebab-case .plan.md filename.",
+        "Includes codebase pattern observations, mandatory reading, files to change, ordered tasks, validation commands, risks, and acceptance criteria.",
+        "When a PRD fixture has pending phases, selects the next pending phase and records a PRD back-reference.",
+        "Uses .codex/prps/ paths and does not write to source-harness .claude/PRPs/ paths."
+      ]
+    }
+  ]
+}

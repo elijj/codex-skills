@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/code-review Review my local changes before commit.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review PR #42 but do not post to GitHub.",
+    "should_trigger": true
+  },
+  {
+    "query": "Is this branch safe to merge?",
+    "should_trigger": true
+  },
+  {
+    "query": "Review the feature/auth-hardening pull request.",
+    "should_trigger": true
+  },
+  {
+    "query": "Check this diff for correctness and security issues.",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a code review of my uncommitted changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this docs-only diff for misleading examples.",
+    "should_trigger": true
+  },
+  {
+    "query": "Find bugs and missing tests in the current patch.",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me approve versus request changes guidance.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review the PR URL I just sent.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix the failing build.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a PRP plan artifact.",
+    "should_trigger": false
+  },
+  {
+    "query": "Use TDD to implement a new endpoint.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a pull request from this branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit all staged files.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright test coverage.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude workflow to Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan a migration and wait for confirmation.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement this plan file.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize this architecture document.",
+    "should_trigger": false
+  }
+]
