@@ -15,6 +15,8 @@ The marketplace installs the `codex-skills` plugin by default. The plugin curren
 - `skill-creator` from `plugins/codex-skills/skills/skill-creator`
 - `harness-skill-porting` from `plugins/codex-skills/skills/harness-skill-porting`
 - `karpathy-guidelines` from `plugins/codex-skills/skills/karpathy-guidelines`
+- `refactor-cleaner` from `plugins/codex-skills/skills/refactor-cleaner`
+- `warp-worktree-fix` from `plugins/codex-skills/skills/warp-worktree-fix`
 - `implementation-planning` from `plugins/codex-skills/skills/implementation-planning`
 - `tdd-workflow` from `plugins/codex-skills/skills/tdd-workflow`
 - `build-fix` from `plugins/codex-skills/skills/build-fix`
@@ -32,6 +34,8 @@ Adding this marketplace makes those skills available through the plugin system.
 These skills preserve converted workflow behavior from other agent-harness surfaces while keeping `skills/` as the canonical Codex surface:
 
 - Behavioral: `karpathy-guidelines`
+- Cleanup and refactoring: `refactor-cleaner`
+- Warp worktree config repair: `warp-worktree-fix`
 - Planning and implementation: `implementation-planning`, `prp-plan`, `prp-implement`
 - Validation and review: `tdd-workflow`, `build-fix`, `code-review`, `e2e-testing`
 - GitHub workflow: `prp-commit`, `prp-pr`

@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/refactor-clean Find dead code in this repo and remove it carefully.",
+    "should_trigger": true
+  },
+  {
+    "query": "Clean up unused exports, imports, and orphaned files.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run a cautious dead-code cleanup pass on this codebase.",
+    "should_trigger": true
+  },
+  {
+    "query": "Remove dead branches and duplicate helper functions, one at a time.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use knip or a similar analyzer to find unused code.",
+    "should_trigger": true
+  },
+  {
+    "query": "Delete safe dead code and verify after each change.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor clean this package: unused imports and duplicate wrappers.",
+    "should_trigger": true
+  },
+  {
+    "query": "Find orphaned files and unused dependencies.",
+    "should_trigger": true
+  },
+  {
+    "query": "Strip dead code from this Python project using vulture if available.",
+    "should_trigger": true
+  },
+  {
+    "query": "Cautiously clean duplicate logic and unused modules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor this feature to use a cleaner architecture.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write tests for this parser bug.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the TypeScript build errors after my last change.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this diff for security issues.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an implementation plan for the migration.",
+    "should_trigger": false
+  },
+  {
+    "query": "Turn this Cursor rule pack into a Codex skill.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize the README changes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Remove duplicate rows from this spreadsheet.",
+    "should_trigger": false
+  },
+  {
+    "query": "Clean up my meeting notes and action items.",
+    "should_trigger": false
+  },
+  {
+    "query": "Delete duplicate photos from my downloads folder.",
+    "should_trigger": false
+  }
+]

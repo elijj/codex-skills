@@ -8,6 +8,8 @@ VALIDATOR="$SKILLS_DIR/skill-creator/scripts/quick_validate.py"
 converted_skills=(
   harness-skill-porting
   karpathy-guidelines
+  refactor-cleaner
+  warp-worktree-fix
   implementation-planning
   tdd-workflow
   build-fix

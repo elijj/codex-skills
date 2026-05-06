@@ -1,0 +1,3 @@
+interface:
+  display_name: "Refactor Cleaner"
+  short_description: "Safely remove dead code"

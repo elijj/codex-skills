@@ -1,0 +1,65 @@
+{
+  "skill_name": "refactor-cleaner",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "In this TypeScript package, find dead code, unused imports, and duplicate helpers. Remove only the safe items and verify after each deletion.",
+      "expected_output": "Selects a suitable analyzer or ripgrep fallback, classifies findings into SAFE/CAUTION/DANGER, deletes one item at a time, reruns verification after each deletion, and summarizes what was removed, skipped, and left uncertain.",
+      "files": [],
+      "assertions": [
+        "Explains which analyzer or fallback search it would use for the repo.",
+        "Classifies candidates into SAFE, CAUTION, and DANGER before deleting anything.",
+        "Runs a baseline verification target before the first deletion.",
+        "Deletes one item at a time and reruns verification after each deletion.",
+        "Summarizes deleted, skipped, and remaining uncertain items."
+      ],
+      "expectations": [
+        "Explains which analyzer or fallback search it would use for the repo.",
+        "Classifies candidates into SAFE, CAUTION, and DANGER before deleting anything.",
+        "Runs a baseline verification target before the first deletion.",
+        "Deletes one item at a time and reruns verification after each deletion.",
+        "Summarizes deleted, skipped, and remaining uncertain items."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Clean up a published package with orphaned files and duplicate wrappers, but stop if anything could be part of the public API.",
+      "expected_output": "Checks for dynamic references and public exports before deleting risky items, removes duplicates only after the cleanup pass, and clearly explains what was left alone and why.",
+      "files": [],
+      "assertions": [
+        "Searches for dynamic imports, string references, public exports, or generated entrypoints before deleting caution items.",
+        "Refuses to delete DANGER items without proof.",
+        "Cleans duplicates only after the dead-code pass.",
+        "Does not broaden the task into unrelated refactors.",
+        "Reports what was left alone and why."
+      ],
+      "expectations": [
+        "Searches for dynamic imports, string references, public exports, or generated entrypoints before deleting caution items.",
+        "Refuses to delete DANGER items without proof.",
+        "Cleans duplicates only after the dead-code pass.",
+        "Does not broaden the task into unrelated refactors.",
+        "Reports what was left alone and why."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use whatever dead-code tool fits best, then clean the dead code in a Python-heavy repo and verify the change.",
+      "expected_output": "Chooses a stack-appropriate analyzer or ripgrep fallback, removes safe dead code incrementally, reruns verification after each deletion, and ends with a concise cleanup summary.",
+      "files": [],
+      "assertions": [
+        "Chooses a stack-appropriate analyzer or ripgrep fallback.",
+        "Reruns the same test or build command after each deletion.",
+        "Does not refactor beyond the cleanup task.",
+        "Mentions the exact verification command(s) it ran.",
+        "Ends with a concise cleanup summary."
+      ],
+      "expectations": [
+        "Chooses a stack-appropriate analyzer or ripgrep fallback.",
+        "Reruns the same test or build command after each deletion.",
+        "Does not refactor beyond the cleanup task.",
+        "Mentions the exact verification command(s) it ran.",
+        "Ends with a concise cleanup summary."
+      ]
+    }
+  ]
+}
