@@ -1,0 +1,125 @@
+{
+  "skill_name": "harness-skill-porting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Convert this Claude Code skill into a Codex skill with full parity. It has a SKILL.md, a .claude/commands/release.md slash command, and a PreCommit hook that runs a secret scan. Put the result under plugins/codex-skills/skills/release-helper and explain any parity gaps.",
+      "expected_output": "Creates or describes a Codex skill that folds command behavior into SKILL.md, emulates the hook with an explicit verification step or script, includes a row-level parity ledger with status/risk/note for every source dependency, and reports verification command plus result.",
+      "files": [],
+      "assertions": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ],
+      "expectations": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have a Cursor rules folder and a Roo custom mode for database migrations. Make this workflow usable as a Codex skill, but keep project-only rules out of the reusable skill.",
+      "expected_output": "Separates reusable migration workflow from project policy, maps rule-pack and custom-mode features to Codex surfaces in a row-level parity ledger, and proposes target files plus validation command/results.",
+      "files": [],
+      "assertions": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ],
+      "expectations": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Port a Claude agent workflow that relies on planner, tdd-guide, and security-reviewer subagents into Codex. Current runtime may not support child agents, so preserve behavior without assuming delegation.",
+      "expected_output": "Converts subagent responsibilities into inline planning, testing, and security review guidance, notes optional delegation only when authorized and available, includes eval coverage for the emulated behavior, and records each source agent in the parity ledger.",
+      "files": [],
+      "assertions": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ],
+      "expectations": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Convert the Karpathy guidelines skill from https://github.com/forrestchang/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md into this Codex plugin. Preserve the always-on behavior as much as Codex supports.",
+      "expected_output": "Creates a Codex skill preserving the four behavior principles, documents ambient always-on parity limits with an exact AGENTS.md snippet or manual-install note, uses strong trigger phrasing, adds eval prompts for ambiguity/minimal diffs/test-first bug fixes, and reports validation.",
+      "files": [],
+      "assertions": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ],
+      "expectations": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Convert https://github.com/affaan-m/everything-claude-code/blob/main/commands/plan.md with full parity. If it references other commands or agents, convert the needed dependencies too.",
+      "expected_output": "Traces the planner agent and follow-on command dependencies, creates implementation-planning plus separate dependent skills where needed, preserves the confirmation gate, adds evals for every converted skill, and reports a row-level parity ledger plus validation results.",
+      "files": [],
+      "assertions": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ],
+      "expectations": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Convert a Claude skill that assumes a private MCP server called acme-internal-search and a PreToolUse hook. The MCP is not available in this Codex runtime, but I still want the best possible parity.",
+      "expected_output": "Marks the missing MCP as out of scope or emulated with a concrete fallback, converts the hook to an explicit verification step or script, includes status/risk/note rows in the parity ledger, and states what is required for full parity.",
+      "files": [],
+      "assertions": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ],
+      "expectations": [
+        "Output includes the parity ledger header: | Source feature/dependency | Target surface/file | Status | Risk | Note |.",
+        "Every source command, agent, hook, MCP assumption, ambient rule, and required bundled resource named in the prompt appears as its own ledger row.",
+        "Unsupported source-harness behavior is marked Emulated or Out of scope and does not claim unavailable hook, MCP, or subagent enforcement.",
+        "Ambient behavior is handled by an actual AGENTS.md update or an exact snippet marked manual repo-level install required.",
+        "Verification includes the quick_validate.py command and an explicit pass/fail result."
+      ]
+    }
+  ]
+}

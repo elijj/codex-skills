@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/tdd Fix the CSV parser crash on empty rows.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use test-driven development for this new API endpoint.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add a failing test first, then implement the bug fix.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor checkout calculation without behavior changes using tests.",
+    "should_trigger": true
+  },
+  {
+    "query": "Implement this feature with RED GREEN REFACTOR evidence.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write unit and integration tests before production code.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make the auth flow safer and report coverage.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix this regression with a reproducing test.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use TDD checkpoints while changing the service.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build this component test-first.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add Playwright E2E tests for a checkout browser flow.",
+    "should_trigger": false
+  },
+  {
+    "query": "Debug a flaky Playwright test in CI.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a PRP plan artifact only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review PR #42 and do not post.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix compiler errors after my change.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit staged changes with a conventional message.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a GitHub pull request.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert this Claude command into a Codex skill.",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me an implementation plan and wait.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a README for test strategy.",
+    "should_trigger": false
+  }
+]

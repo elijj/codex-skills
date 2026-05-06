@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/build-fix The TypeScript build is failing.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix these compile errors with minimal diffs.",
+    "should_trigger": true
+  },
+  {
+    "query": "cargo build fails with trait errors; work through it.",
+    "should_trigger": true
+  },
+  {
+    "query": "CI says a module is missing; fix the build safely.",
+    "should_trigger": true
+  },
+  {
+    "query": "The Gradle build fails after my changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Resolve Python import errors from the test run.",
+    "should_trigger": true
+  },
+  {
+    "query": "Go build ./... is failing; diagnose root causes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix tsc --noEmit errors incrementally.",
+    "should_trigger": true
+  },
+  {
+    "query": "The package will not compile after a refactor.",
+    "should_trigger": true
+  },
+  {
+    "query": "Maven compile fails; repair it one error group at a time.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write tests first for a parser bug.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this code for security and correctness.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an implementation plan and wait for approval.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright coverage for login.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a GitHub pull request.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit only documentation changes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert these Cursor rules into a Codex skill.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a PRP artifact for the billing feature.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement an existing PRP plan.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how TypeScript generics work.",
+    "should_trigger": false
+  }
+]

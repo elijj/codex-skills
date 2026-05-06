@@ -1,0 +1,69 @@
+{
+  "skill_name": "prp-pr",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/prp-pr --draft main",
+      "expected_output": "Validates git state, discovers templates, analyzes commits/files, pushes with upstream tracking, creates a draft PR with gh, and reports URL/status.",
+      "files": [],
+      "assertions": [
+        "Validates branch, working tree, and commits ahead of base before pushing or creating a PR.",
+        "Discovers and preserves GitHub PR template sections, filling unknown sections with N/A.",
+        "Includes commit summary, files changed, testing, and PRP artifact references when present.",
+        "Uses git push -u origin HEAD for upstream tracking.",
+        "Uses gh pr create/view when available and reports URL/status, or reports the unavailable dependency."
+      ],
+      "expectations": [
+        "Validates branch, working tree, and commits ahead of base before pushing or creating a PR.",
+        "Discovers and preserves GitHub PR template sections, filling unknown sections with N/A.",
+        "Includes commit summary, files changed, testing, and PRP artifact references when present.",
+        "Uses git push -u origin HEAD for upstream tracking.",
+        "Uses gh pr create/view when available and reports URL/status, or reports the unavailable dependency."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Create a pull request, but I have unstaged changes.",
+      "expected_output": "Stops before PR creation, reports uncommitted changes, and recommends committing or stashing, with `prp-commit` as the next skill.",
+      "files": [],
+      "assertions": [
+        "Validates branch, working tree, and commits ahead of base before pushing or creating a PR.",
+        "Discovers and preserves GitHub PR template sections, filling unknown sections with N/A.",
+        "Includes commit summary, files changed, testing, and PRP artifact references when present.",
+        "Uses git push -u origin HEAD for upstream tracking.",
+        "Uses gh pr create/view when available and reports URL/status, or reports the unavailable dependency."
+      ],
+      "expectations": [
+        "Validates branch, working tree, and commits ahead of base before pushing or creating a PR.",
+        "Discovers and preserves GitHub PR template sections, filling unknown sections with N/A.",
+        "Includes commit summary, files changed, testing, and PRP artifact references when present.",
+        "Uses git push -u origin HEAD for upstream tracking.",
+        "Uses gh pr create/view when available and reports URL/status, or reports the unavailable dependency."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Make the PR body follow our existing GitHub PR template.",
+      "expected_output": "Finds and preserves PR template sections, fills missing sections with N/A, and includes testing and artifact context.",
+      "files": [
+        "evals/fixtures/.github/PULL_REQUEST_TEMPLATE.md",
+        "evals/fixtures/.codex/prps/plans/add-notifications.plan.md",
+        "evals/fixtures/.codex/prps/reports/add-notifications.implementation.md"
+      ],
+      "assertions": [
+        "Validates branch, working tree, and commits ahead of base before pushing or creating a PR.",
+        "Discovers and preserves GitHub PR template sections, filling unknown sections with N/A.",
+        "Includes commit summary, files changed, testing, and PRP artifact references when present.",
+        "Uses git push -u origin HEAD for upstream tracking.",
+        "Uses gh pr create/view when available and reports URL/status, or reports the unavailable dependency."
+      ],
+      "expectations": [
+        "Validates branch, working tree, and commits ahead of base before pushing or creating a PR.",
+        "Discovers and preserves GitHub PR template sections, filling unknown sections with N/A.",
+        "Includes commit summary, files changed, testing, and PRP artifact references when present.",
+        "Uses git push -u origin HEAD for upstream tracking.",
+        "Uses gh pr create/view when available and reports URL/status, or reports the unavailable dependency."
+      ]
+    }
+  ]
+}

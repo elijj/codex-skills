@@ -1,0 +1,3 @@
+interface:
+  display_name: "Warp Worktree Fix"
+  short_description: "Fix Warp worktree path configs for WSL"

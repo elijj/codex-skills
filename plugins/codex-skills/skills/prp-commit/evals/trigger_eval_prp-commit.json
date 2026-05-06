@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/prp-commit the auth changes",
+    "should_trigger": true
+  },
+  {
+    "query": "Commit everything except tests with a conventional message.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use whatever is already staged and commit it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Stage only the billing files and create a smart commit.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make a focused conventional commit from current changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Commit only new files.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a commit for the docs updates.",
+    "should_trigger": true
+  },
+  {
+    "query": "Stage the natural-language target I described and commit.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a concise feat commit for these changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Commit all current git changes safely.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a GitHub pull request from this branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review my local changes before committing.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix build errors before I commit.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a PRP plan artifact.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement this PRP plan.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Use TDD for a new endpoint.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude workflow to Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan this feature and wait.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain conventional commit types without touching git.",
+    "should_trigger": false
+  }
+]

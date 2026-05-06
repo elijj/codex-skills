@@ -1,0 +1,65 @@
+{
+  "skill_name": "build-fix",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/build-fix The TypeScript build fails after my last change. Fix it with minimal diffs and rerun the relevant command.",
+      "expected_output": "Detects the TypeScript build command, groups errors, fixes one root cause at a time, reruns validation, and reports original/final error counts, fixed/remaining errors, and new errors introduced.",
+      "files": [],
+      "assertions": [
+        "Detects the build system and names the exact command used or selected.",
+        "Groups errors by root cause before making fixes.",
+        "Fixes errors incrementally and reruns relevant validation after each meaningful fix.",
+        "Reports original and final error counts, remaining errors, and whether new errors were introduced.",
+        "Does not install new dependencies or make broad architecture changes without stopping to report the blocker."
+      ],
+      "expectations": [
+        "Detects the build system and names the exact command used or selected.",
+        "Groups errors by root cause before making fixes.",
+        "Fixes errors incrementally and reruns relevant validation after each meaningful fix.",
+        "Reports original and final error counts, remaining errors, and whether new errors were introduced.",
+        "Does not install new dependencies or make broad architecture changes without stopping to report the blocker."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "cargo build is failing with import and trait errors. Work through the build safely.",
+      "expected_output": "Runs or uses cargo output, fixes syntax/import/type issues incrementally, and stops before broad architecture changes.",
+      "files": [],
+      "assertions": [
+        "Detects the build system and names the exact command used or selected.",
+        "Groups errors by root cause before making fixes.",
+        "Fixes errors incrementally and reruns relevant validation after each meaningful fix.",
+        "Reports original and final error counts, remaining errors, and whether new errors were introduced.",
+        "Does not install new dependencies or make broad architecture changes without stopping to report the blocker."
+      ],
+      "expectations": [
+        "Detects the build system and names the exact command used or selected.",
+        "Groups errors by root cause before making fixes.",
+        "Fixes errors incrementally and reruns relevant validation after each meaningful fix.",
+        "Reports original and final error counts, remaining errors, and whether new errors were introduced.",
+        "Does not install new dependencies or make broad architecture changes without stopping to report the blocker."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "CI says a module is missing. Please fix the build, but don't install new packages without telling me.",
+      "expected_output": "Checks whether the dependency exists, suggests install if required, and does not silently add packages.",
+      "files": [],
+      "assertions": [
+        "Detects the build system and names the exact command used or selected.",
+        "Groups errors by root cause before making fixes.",
+        "Fixes errors incrementally and reruns relevant validation after each meaningful fix.",
+        "Reports original and final error counts, remaining errors, and whether new errors were introduced.",
+        "Does not install new dependencies or make broad architecture changes without stopping to report the blocker."
+      ],
+      "expectations": [
+        "Detects the build system and names the exact command used or selected.",
+        "Groups errors by root cause before making fixes.",
+        "Fixes errors incrementally and reruns relevant validation after each meaningful fix.",
+        "Reports original and final error counts, remaining errors, and whether new errors were introduced.",
+        "Does not install new dependencies or make broad architecture changes without stopping to report the blocker."
+      ]
+    }
+  ]
+}

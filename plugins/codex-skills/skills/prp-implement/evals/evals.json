@@ -1,0 +1,72 @@
+{
+  "skill_name": "prp-implement",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/prp-implement .codex/prps/plans/add-notifications.plan.md",
+      "expected_output": "Loads the plan, extracts tasks and validations, prepares git state, executes incrementally, writes `.codex/prps/reports/*.implementation.md`, and reports validation results.",
+      "files": [
+        "evals/fixtures/.codex/prps/plans/add-notifications.plan.md"
+      ],
+      "assertions": [
+        "Loads the provided .codex/prps/plans/*.plan.md artifact and extracts summary, files, tasks, validations, and acceptance criteria.",
+        "Checks git branch/status and protects unrelated user work before editing.",
+        "Runs per-task validation and fixes or reports failures before moving to the next task.",
+        "Writes or instructs creation of a .codex/prps/reports/*.implementation.md report.",
+        "Records deviations from the original plan and final validation results."
+      ],
+      "expectations": [
+        "Loads the provided .codex/prps/plans/*.plan.md artifact and extracts summary, files, tasks, validations, and acceptance criteria.",
+        "Checks git branch/status and protects unrelated user work before editing.",
+        "Runs per-task validation and fixes or reports failures before moving to the next task.",
+        "Writes or instructs creation of a .codex/prps/reports/*.implementation.md report.",
+        "Records deviations from the original plan and final validation results."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Execute .codex/prps/plans/fix-empty-row-import.plan.md, but stop if validation fails instead of piling on more changes.",
+      "expected_output": "Runs per-task validation, fixes or reports failures before continuing, and does not accumulate broken state.",
+      "files": [
+        "evals/fixtures/.codex/prps/plans/fix-empty-row-import.plan.md"
+      ],
+      "assertions": [
+        "Loads the provided .codex/prps/plans/*.plan.md artifact and extracts summary, files, tasks, validations, and acceptance criteria.",
+        "Checks git branch/status and protects unrelated user work before editing.",
+        "Runs per-task validation and fixes or reports failures before moving to the next task.",
+        "Writes or instructs creation of a .codex/prps/reports/*.implementation.md report.",
+        "Records deviations from the original plan and final validation results."
+      ],
+      "expectations": [
+        "Loads the provided .codex/prps/plans/*.plan.md artifact and extracts summary, files, tasks, validations, and acceptance criteria.",
+        "Checks git branch/status and protects unrelated user work before editing.",
+        "Runs per-task validation and fixes or reports failures before moving to the next task.",
+        "Writes or instructs creation of a .codex/prps/reports/*.implementation.md report.",
+        "Records deviations from the original plan and final validation results."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Implement .codex/prps/plans/add-preferences.plan.md and tell me what changed from the original plan.",
+      "expected_output": "Records deviations from the plan, explains why they happened, includes them in the implementation report and final response, and reports PRD update/archive status.",
+      "files": [
+        "evals/fixtures/.codex/prps/plans/add-preferences.plan.md",
+        "evals/fixtures/docs/notifications.prd.md"
+      ],
+      "assertions": [
+        "Loads the provided .codex/prps/plans/*.plan.md artifact and extracts summary, files, tasks, validations, and acceptance criteria.",
+        "Checks git branch/status and protects unrelated user work before editing.",
+        "Runs per-task validation and fixes or reports failures before moving to the next task.",
+        "Writes or instructs creation of a .codex/prps/reports/*.implementation.md report.",
+        "Records deviations from the original plan and final validation results."
+      ],
+      "expectations": [
+        "Loads the provided .codex/prps/plans/*.plan.md artifact and extracts summary, files, tasks, validations, and acceptance criteria.",
+        "Checks git branch/status and protects unrelated user work before editing.",
+        "Runs per-task validation and fixes or reports failures before moving to the next task.",
+        "Writes or instructs creation of a .codex/prps/reports/*.implementation.md report.",
+        "Records deviations from the original plan and final validation results."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Harness Skill Porting"
+  short_description: "Convert skills from other agent harnesses to Codex"

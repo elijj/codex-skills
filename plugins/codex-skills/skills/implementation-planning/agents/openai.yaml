@@ -1,0 +1,3 @@
+interface:
+  display_name: "Implementation Planning"
+  short_description: "Plan complex code changes before editing"

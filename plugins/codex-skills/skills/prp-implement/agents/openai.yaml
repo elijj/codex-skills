@@ -1,0 +1,3 @@
+interface:
+  display_name: "PRP Implement"
+  short_description: "Execute PRP plans with validation loops"

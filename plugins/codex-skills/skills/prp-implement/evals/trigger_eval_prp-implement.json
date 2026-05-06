@@ -1,0 +1,82 @@
+[
+  {
+    "query": "/prp-implement .codex/prps/plans/add-notifications.plan.md",
+    "should_trigger": true
+  },
+  {
+    "query": "Execute this PRP plan step by step.",
+    "should_trigger": true
+  },
+  {
+    "query": "Implement .codex/prps/plans/fix-empty-row-import.plan.md and validate each task.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run the plan and write an implementation report.",
+    "should_trigger": true
+  },
+  {
+    "query": "Load this plan file, check git status, and implement incrementally.",
+    "should_trigger": true
+  },
+  {
+    "query": "Carry out the PRP without accumulating broken state.",
+    "should_trigger": true
+  },
+  {
+    "query": "Implement the existing .codex/prps plan and report deviations.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use validation loops while executing this plan artifact.",
+    "should_trigger": true
+  },
+  {
+    "query": "Apply every task in the plan and stop on validation failure.",
+    "should_trigger": true
+  },
+  {
+    "query": "Finish the planned feature from .codex/prps/plans/search.plan.md.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a new PRP plan from this PRD.",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me a conversational implementation plan and wait.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review local changes before committing.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a pull request from this branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit all changes with a conventional message.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix TypeScript build errors.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add Playwright tests for checkout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a Claude workflow into Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write tests first for a bug fix.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize this completed implementation report.",
+    "should_trigger": false
+  }
+]

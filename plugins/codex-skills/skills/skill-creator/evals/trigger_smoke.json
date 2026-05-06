@@ -1,0 +1,10 @@
+[
+  {
+    "query": "Create a Codex skill for a reusable invoice cleanup workflow.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a short README for a Python package.",
+    "should_trigger": false
+  }
+]
