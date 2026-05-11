@@ -19,6 +19,7 @@ converted_skills=(
   prp-pr
   prp-commit
   e2e-testing
+  cost-aware-llm-pipeline
 )
 
 echo "== Skill structure =="

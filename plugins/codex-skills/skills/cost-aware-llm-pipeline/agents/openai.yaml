@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cost-Aware LLM Pipeline"
+  short_description: "Control LLM API spend"
+

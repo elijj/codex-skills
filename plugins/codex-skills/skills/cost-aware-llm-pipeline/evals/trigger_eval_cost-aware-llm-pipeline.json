@@ -1,0 +1,82 @@
+[
+  {
+    "query": "in `jobs/import_companies.ts` each row calls gpt-5.1 with the same giant system prompt and last night it spent $180. please add cheap-model routing for simple rows, a $20 per-import cap, and token usage logging.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review `src/llm/gateway.py`: it supports claude + openai but every request goes to the premium model. Need cheap defaults, escalation for long contexts, and tenant spend ledger entries.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our agent worker retries Anthropic BadRequestError three times and burns credits. Fix retry classification and make budget_exhausted stop the queue.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add prompt caching to the reusable system prompt in `support_summary.ts`, but don't cache customer-specific ticket bodies or secrets. Also account for cached token costs.",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a cost-aware LLM router: fast model for extraction, balanced model for normal summaries, strong model for long legal docs, all configurable from env.",
+    "should_trigger": true
+  },
+  {
+    "query": "The batch evaluator should split into chunks when workspace monthly OpenAI budget has less than $5 left, not just log that it's over budget after the run.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you add immutable usage records around our Gemini calls? Need request id, user id, selected model, token counts, route reason, retry attempt, and estimated cost.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our cheap model sometimes returns invalid JSON. Escalate to the stronger model only after schema validation fails, and make that escalation visible in metrics.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor the LLM provider client so model names and prices live in config instead of scattered constants across `summarize.ts` and `extract.ts`.",
+    "should_trigger": true
+  },
+  {
+    "query": "The nightly document classifier used all API credits again. Add per-tenant limits, model fallback policy, paid retry caps, and tests with a fake provider.",
+    "should_trigger": true
+  },
+  {
+    "query": "The pricing page says our product uses OpenAI and Claude; update the marketing copy so it sounds less expensive.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add exponential backoff to the Stripe subscription creation call when the network flakes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Cache the `/api/products` response in Redis for 5 minutes so the storefront loads faster.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a prompt that makes the model produce friendlier customer-support summaries.",
+    "should_trigger": false
+  },
+  {
+    "query": "Estimate how many tokens are in this pasted article, no API call or app code changes needed.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain whether GPT models are cheaper than Claude for my personal usage, no codebase involved.",
+    "should_trigger": false
+  },
+  {
+    "query": "The dashboard has a monthly budget chart; fix the axis labels and tooltip formatting.",
+    "should_trigger": false
+  },
+  {
+    "query": "Our Postgres query planner retries the expensive report query too often; tune DB indexes and retry settings.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a local tokenizer CLI that counts tokens in a file before I paste it into ChatGPT.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a cache-control header for static JS bundles served by nginx.",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "skill_name": "cost-aware-llm-pipeline",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "In `workers/enrichLeads.ts`, we call OpenAI once per CSV row and finance says yesterday's import burned through $340. Add model routing so short rows use a cheap model, cap per-job spend at $25, track actual token usage, and avoid retrying permanent errors.",
+      "expected_output": "Inspects the TypeScript worker and provider call path, adds configurable model profiles, routes by measurable row complexity, preflights a $25 job budget before provider calls, records actual usage after calls, narrows retry behavior, and verifies with fake provider tests.",
+      "files": [],
+      "assertions": [
+        "Identifies the existing provider SDK, model selection, usage metadata, batch size, and retry behavior before editing.",
+        "Defines configurable model tiers or profiles instead of scattering hardcoded model names.",
+        "Routes by measurable complexity signals such as token count, character count, item count, schema complexity, tool requirements, or validation failure.",
+        "Checks the job budget before paid calls and records actual usage after calls.",
+        "Retries only transient errors and fails fast for auth, invalid request, policy, validation, and budget errors.",
+        "Adds or updates fake-provider tests for routing, budget prevention, retry classification, and usage recording."
+      ],
+      "expectations": [
+        "Identifies the existing provider SDK, model selection, usage metadata, batch size, and retry behavior before editing.",
+        "Defines configurable model tiers or profiles instead of scattering hardcoded model names.",
+        "Routes by measurable complexity signals such as token count, character count, item count, schema complexity, tool requirements, or validation failure.",
+        "Checks the job budget before paid calls and records actual usage after calls.",
+        "Retries only transient errors and fails fast for auth, invalid request, policy, validation, and budget errors.",
+        "Adds or updates fake-provider tests for routing, budget prevention, retry classification, and usage recording."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review `src/llm/gateway.py`. It supports Anthropic and OpenAI, but all requests go to the strongest model. I want cheap defaults, escalation for long context or schema failures, and an auditable per-tenant spend ledger.",
+      "expected_output": "Reviews the gateway for provider differences, introduces a cost policy with model profiles and routing thresholds, logs escalation and override reasons, keeps provider pricing configurable, creates immutable usage records, and recommends or adds tests proving strong models are selected only for explicit reasons.",
+      "files": [],
+      "assertions": [
+        "Calls out provider feature differences such as caching, structured outputs, tool calls, context limits, and usage metadata.",
+        "Keeps model pricing and ids configurable or tied to existing config instead of hardcoding stale values.",
+        "Uses measurable routing signals and records the routing reason.",
+        "Keeps forced model overrides explicit, logged, and subject to budget checks.",
+        "Creates or recommends an immutable usage ledger with provider, model, tokens, cost estimate, route reason, trace id, and tenant or user id.",
+        "Adds or requests tests proving expensive model use is intentional."
+      ],
+      "expectations": [
+        "Calls out provider feature differences such as caching, structured outputs, tool calls, context limits, and usage metadata.",
+        "Keeps model pricing and ids configurable or tied to existing config instead of hardcoding stale values.",
+        "Uses measurable routing signals and records the routing reason.",
+        "Keeps forced model overrides explicit, logged, and subject to budget checks.",
+        "Creates or recommends an immutable usage ledger with provider, model, tokens, cost estimate, route reason, trace id, and tenant or user id.",
+        "Adds or requests tests proving expensive model use is intentional."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our support-ticket summarizer has a long reusable system prompt and a per-customer monthly LLM budget. Add prompt caching if the provider supports it, but don't cache customer secrets or stale ticket context.",
+      "expected_output": "Separates stable prompt content from volatile/customer-specific content, verifies provider caching support, models cached-token costs separately when available, enforces the per-customer budget before calls, preserves tenant isolation, and tests cache boundaries with fake provider calls.",
+      "files": [],
+      "assertions": [
+        "Verifies provider caching support or falls back safely when unavailable.",
+        "Caches only stable reusable content such as system prompts, tools, schemas, or static context.",
+        "Avoids caching secrets, volatile retrieval context, permission-dependent content, and fresh-ticket data.",
+        "Defines cache keys, TTL or invalidation, and tenant/customer isolation.",
+        "Accounts for cached tokens separately when provider metadata supports it.",
+        "Tests that caching is applied only to stable content and budget checks still run."
+      ],
+      "expectations": [
+        "Verifies provider caching support or falls back safely when unavailable.",
+        "Caches only stable reusable content such as system prompts, tools, schemas, or static context.",
+        "Avoids caching secrets, volatile retrieval context, permission-dependent content, and fresh-ticket data.",
+        "Defines cache keys, TTL or invalidation, and tenant/customer isolation.",
+        "Accounts for cached tokens separately when provider metadata supports it.",
+        "Tests that caching is applied only to stable content and budget checks still run."
+      ]
+    }
+  ]
+}
+

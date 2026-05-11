@@ -21,6 +21,7 @@ The marketplace installs the `codex-skills` plugin by default. The plugin curren
 - `tdd-workflow` from `plugins/codex-skills/skills/tdd-workflow`
 - `build-fix` from `plugins/codex-skills/skills/build-fix`
 - `code-review` from `plugins/codex-skills/skills/code-review`
+- `cost-aware-llm-pipeline` from `plugins/codex-skills/skills/cost-aware-llm-pipeline`
 - `prp-plan` from `plugins/codex-skills/skills/prp-plan`
 - `prp-implement` from `plugins/codex-skills/skills/prp-implement`
 - `prp-pr` from `plugins/codex-skills/skills/prp-pr`
@@ -38,6 +39,7 @@ These skills preserve converted workflow behavior from other agent-harness surfa
 - Warp worktree config repair: `warp-worktree-fix`
 - Planning and implementation: `implementation-planning`, `prp-plan`, `prp-implement`
 - Validation and review: `tdd-workflow`, `build-fix`, `code-review`, `e2e-testing`
+- LLM cost control: `cost-aware-llm-pipeline`
 - GitHub workflow: `prp-commit`, `prp-pr`
 - Meta conversion: `harness-skill-porting`
 
