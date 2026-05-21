@@ -14,6 +14,7 @@ converted_skills=(
   tdd-workflow
   build-fix
   code-review
+  goal-grader
   update-codemaps
   update-docs
   prp-plan

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goal Grader"
+  short_description: "Grade and optimize Codex /goal prompts"
+  default_prompt: "Use $goal-grader to grade this Codex /goal prompt, identify execution risks, and provide an optimized rewrite."

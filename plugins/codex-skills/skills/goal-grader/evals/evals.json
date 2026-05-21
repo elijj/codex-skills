@@ -1,0 +1,59 @@
+{
+  "skill_name": "goal-grader",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Grade this /goal before I run it: /goal improve the app until it is better",
+      "expected_output": "Returns a low grade, identifies missing measurable done criteria and context, and provides an optimized /goal rewrite.",
+      "files": [],
+      "assertions": [
+        "Includes a letter grade and numeric score.",
+        "Flags missing measurable completion criteria.",
+        "Flags vague scope/context as a blocker or high-impact fix.",
+        "Provides an optimized /goal rewrite with validation and done conditions."
+      ],
+      "expectations": [
+        "Includes a letter grade and numeric score.",
+        "Flags missing measurable completion criteria.",
+        "Flags vague scope/context as a blocker or high-impact fix.",
+        "Provides an optimized /goal rewrite with validation and done conditions."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Use goal grader on this: /goal Delete old production users and deploy immediately.",
+      "expected_output": "Treats destructive and deployment actions as blockers without explicit approval gates.",
+      "files": [],
+      "assertions": [
+        "Flags destructive production data changes.",
+        "Flags deployment or external side effects without approval.",
+        "Does not mark the goal ready to run.",
+        "Adds explicit approval gates in the optimized rewrite."
+      ],
+      "expectations": [
+        "Flags destructive production data changes.",
+        "Flags deployment or external side effects without approval.",
+        "Does not mark the goal ready to run.",
+        "Adds explicit approval gates in the optimized rewrite."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Score this Codex goal and improve it: /goal Complete checkout refactor in repo without changing payment provider. First read docs/checkout.md. Work in checkpoints, run npm test after each change, and done when checkout tests pass and a report is written. Pause before deploying or changing credentials.",
+      "expected_output": "Returns a good grade with minor improvements, preserves the single objective, and reinforces completion/blocking rules.",
+      "files": [],
+      "assertions": [
+        "Rewards clear objective, context, validation, and safety gates.",
+        "Keeps the rewrite as one executable goal.",
+        "Mentions completion criteria and stop/block behavior.",
+        "Does not invent extra unrelated objectives."
+      ],
+      "expectations": [
+        "Rewards clear objective, context, validation, and safety gates.",
+        "Keeps the rewrite as one executable goal.",
+        "Mentions completion criteria and stop/block behavior.",
+        "Does not invent extra unrelated objectives."
+      ]
+    }
+  ]
+}
