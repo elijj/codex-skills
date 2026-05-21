@@ -1,0 +1,95 @@
+{
+  "skill_name": "update-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/update-docs Sync docs after adding package scripts and env vars.",
+      "expected_output": "Reads package/env source files, updates generated sections in docs, preserves manual prose, and reports updated/skipped docs.",
+      "files": [],
+      "assertions": [
+        "Treats package/build files and env templates as source of truth.",
+        "Uses generated markers and preserves manual sections outside them.",
+        "Never reads or copies secret .env values.",
+        "Reports updated, skipped, and flagged docs."
+      ],
+      "expectations": [
+        "Treats package/build files and env templates as source of truth.",
+        "Uses generated markers and preserves manual sections outside them.",
+        "Never reads or copies secret .env values.",
+        "Reports updated, skipped, and flagged docs."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Refresh docs/CONTRIBUTING.md and docs/RUNBOOK.md from Dockerfile, package.json, and compose config.",
+      "expected_output": "Updates generated setup/script/test/runbook sections only when source files support the content.",
+      "files": [],
+      "assertions": [
+        "Extracts scripts/tasks and deployment sources from authoritative files.",
+        "Avoids inventing unsupported deployment procedures.",
+        "Preserves non-generated prose.",
+        "Runs or reports relevant markdown validation if available."
+      ],
+      "expectations": [
+        "Extracts scripts/tasks and deployment sources from authoritative files.",
+        "Avoids inventing unsupported deployment procedures.",
+        "Preserves non-generated prose.",
+        "Runs or reports relevant markdown validation if available."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Check stale docs and update API docs from OpenAPI or route files.",
+      "expected_output": "Flags docs older than 90 days, derives API references from OpenAPI or routes, and asks/skips where source data is missing.",
+      "files": [],
+      "assertions": [
+        "Performs a 90-day staleness check.",
+        "Prefers OpenAPI files before route inference.",
+        "Includes method/path/handler/auth/source when discoverable.",
+        "Marks unknowns instead of guessing."
+      ],
+      "expectations": [
+        "Performs a 90-day staleness check.",
+        "Prefers OpenAPI files before route inference.",
+        "Includes method/path/handler/auth/source when discoverable.",
+        "Marks unknowns instead of guessing."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "/update-docs Existing docs use legacy <!-- AUTO-GENERATED --> markers.",
+      "expected_output": "Replaces content inside legacy AUTO-GENERATED marker blocks without appending duplicate generated sections.",
+      "files": [],
+      "assertions": [
+        "Recognizes legacy ECC AUTO-GENERATED markers.",
+        "Updates content inside the existing marker block.",
+        "Does not append duplicate generated sections.",
+        "Preserves manual prose outside the marker block."
+      ],
+      "expectations": [
+        "Recognizes legacy ECC AUTO-GENERATED markers.",
+        "Updates content inside the existing marker block.",
+        "Does not append duplicate generated sections.",
+        "Preserves manual prose outside the marker block."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "/update-docs Generic docs refresh; docs/API.md does not exist.",
+      "expected_output": "Updates existing docs only, skips missing docs/API.md unless explicitly requested, and reports the skip.",
+      "files": [],
+      "assertions": [
+        "Does not create missing docs for a generic update request.",
+        "Reports missing docs/API.md as skipped or approval-required.",
+        "Creates new docs only when the user explicitly names the path or doc type.",
+        "Still updates existing generated sections from source-of-truth files."
+      ],
+      "expectations": [
+        "Does not create missing docs for a generic update request.",
+        "Reports missing docs/API.md as skipped or approval-required.",
+        "Creates new docs only when the user explicitly names the path or doc type.",
+        "Still updates existing generated sections from source-of-truth files."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  { "query": "/update-docs Sync docs from source-of-truth files.", "should_trigger": true },
+  { "query": "Update generated documentation from package.json and .env.example.", "should_trigger": true },
+  { "query": "Refresh docs/CONTRIBUTING.md from scripts and test commands.", "should_trigger": true },
+  { "query": "Generate environment variable docs from .env.template.", "should_trigger": true },
+  { "query": "Update docs/RUNBOOK.md from Docker and deployment config.", "should_trigger": true },
+  { "query": "Sync API docs from OpenAPI and route files.", "should_trigger": true },
+  { "query": "Check stale docs and refresh generated sections.", "should_trigger": true },
+  { "query": "Preserve manual docs but update generated command tables.", "should_trigger": true },
+  { "query": "Refresh public API documentation from source exports.", "should_trigger": true },
+  { "query": "Update docs after adding new CLI commands.", "should_trigger": true },
+  { "query": "/update-codemaps Refresh architecture maps.", "should_trigger": false },
+  { "query": "Create architecture codemaps under docs/CODEMAPS.", "should_trigger": false },
+  { "query": "Write a marketing README from scratch.", "should_trigger": false },
+  { "query": "Review this pull request for security bugs.", "should_trigger": false },
+  { "query": "Fix the failing typecheck.", "should_trigger": false },
+  { "query": "Commit the current changes.", "should_trigger": false },
+  { "query": "Create a PRP implementation plan.", "should_trigger": false },
+  { "query": "Remove dead code and unused dependencies.", "should_trigger": false },
+  { "query": "Explain how to run the project in chat only.", "should_trigger": false },
+  { "query": "Add E2E tests for login.", "should_trigger": false }
+]

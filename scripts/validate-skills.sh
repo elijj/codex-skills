@@ -14,6 +14,8 @@ converted_skills=(
   tdd-workflow
   build-fix
   code-review
+  update-codemaps
+  update-docs
   prp-plan
   prp-implement
   prp-pr

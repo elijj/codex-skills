@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Codemaps"
+  short_description: "Generate token-lean architecture codemaps"
+  default_prompt: "Use $update-codemaps to refresh token-lean architecture codemaps for this repository."
