@@ -1,155 +1,96 @@
 # codex-skills
 
-Eval-backed reusable Codex skills packaged as a local Codex plugin marketplace.
+Reusable Codex skills packaged as a local Codex plugin marketplace.
 
-This repository is a distribution surface for reusable agent workflows, not a scratchpad. Each skill is intended to be:
+This repo is a distribution surface for reusable agent workflows, not a scratchpad. Skills should be triggerable, portable, validated, and small enough to load only the context they need.
 
-- **Triggerable**: the skill description says when Codex should load it.
-- **Portable**: converted workflows preserve behavior from other agent harnesses where useful.
-- **Validated**: converted skills include task evals, trigger evals, and source-parity notes.
-- **Composable**: skills can carry helper scripts, references, assets, and lightweight UI metadata.
-
-> Unofficial project. This repository is not affiliated with OpenAI, Codex, Anthropic, Claude, or any upstream source projects referenced in converted skills.
+> Unofficial project. Not affiliated with OpenAI, Codex, Anthropic, Claude, or upstream source projects referenced by converted skills.
 
 ## Install
-
-Clone the repository and add it as a local marketplace:
 
 ```bash
 git clone https://github.com/elijj/codex-skills.git
 codex plugin marketplace add ./codex-skills
 ```
 
-For a fork or private checkout, point Codex at the local repository path instead:
+For a local/private checkout:
 
 ```bash
 codex plugin marketplace add /path/to/codex-skills
 ```
 
-The marketplace installs the `codex-skills` plugin by default. Plugin metadata lives at:
+Plugin metadata: `plugins/codex-skills/.codex-plugin/plugin.json`
+
+Skills: `plugins/codex-skills/skills/`
+
+## Skills
+
+- [`skill-creator`](plugins/codex-skills/skills/skill-creator/SKILL.md) — create, package, test, benchmark, and improve Codex skills.
+- [`harness-skill-porting`](plugins/codex-skills/skills/harness-skill-porting/SKILL.md) — convert other agent-harness workflows into Codex-native skills.
+- [`karpathy-guidelines`](plugins/codex-skills/skills/karpathy-guidelines/SKILL.md) — apply pragmatic code-quality guidance.
+- [`refactor-cleaner`](plugins/codex-skills/skills/refactor-cleaner/SKILL.md) — remove dead code and cleanup refactors safely.
+- [`warp-worktree-fix`](plugins/codex-skills/skills/warp-worktree-fix/SKILL.md) — repair Warp worktree configuration issues.
+- [`implementation-planning`](plugins/codex-skills/skills/implementation-planning/SKILL.md) — produce implementation plans before coding.
+- [`tdd-workflow`](plugins/codex-skills/skills/tdd-workflow/SKILL.md) — use test-first implementation loops.
+- [`build-fix`](plugins/codex-skills/skills/build-fix/SKILL.md) — fix build, typecheck, and compile errors incrementally.
+- [`code-review`](plugins/codex-skills/skills/code-review/SKILL.md) — review changes for correctness, security, and maintainability.
+- [`goal-grader`](plugins/codex-skills/skills/goal-grader/SKILL.md) — grade and optimize Codex `/goal` prompts.
+- [`update-codemaps`](plugins/codex-skills/skills/update-codemaps/SKILL.md) — refresh token-lean architecture codemaps.
+- [`update-docs`](plugins/codex-skills/skills/update-docs/SKILL.md) — sync generated docs from source-of-truth files.
+- [`prp-plan`](plugins/codex-skills/skills/prp-plan/SKILL.md) — create PRP-style implementation plans.
+- [`prp-implement`](plugins/codex-skills/skills/prp-implement/SKILL.md) — implement from PRP plans with report artifacts.
+- [`prp-pr`](plugins/codex-skills/skills/prp-pr/SKILL.md) — prepare pull requests from PRP work.
+- [`prp-commit`](plugins/codex-skills/skills/prp-commit/SKILL.md) — prepare commits from PRP work.
+- [`e2e-testing`](plugins/codex-skills/skills/e2e-testing/SKILL.md) — plan and execute end-to-end testing workflows.
+
+## Layout
 
 ```text
-plugins/codex-skills/.codex-plugin/plugin.json
-```
-
-The bundled skills live under:
-
-```text
-plugins/codex-skills/skills/
-```
-
-## Included Skills
-
-- `skill-creator` — create, package, test, benchmark, and improve Codex skills.
-- `harness-skill-porting` — convert Claude Code, Cursor, Cline, Roo, Aider, or prompt-pack workflows into Codex-native skills with parity tracking.
-- `karpathy-guidelines` — apply pragmatic code-quality guidance.
-- `refactor-cleaner` — clean refactors while preserving behavior.
-- `warp-worktree-fix` — repair Warp worktree configuration issues.
-- `implementation-planning` — produce implementation plans before coding.
-- `tdd-workflow` — use test-first implementation loops.
-- `build-fix` — fix build, typecheck, and compile errors incrementally.
-- `code-review` — review changes for correctness, maintainability, security, and test gaps.
-- `goal-grader` — grade and optimize Codex `/goal` prompts before autonomous execution.
-- `update-codemaps` — refresh token-lean architecture codemaps from repository structure.
-- `update-docs` — sync generated documentation from scripts, configs, routes, exports, and deployment sources.
-- `prp-plan` — create PRP-style implementation plans.
-- `prp-implement` — implement from PRP plans with report artifacts.
-- `prp-pr` — prepare pull requests from PRP work.
-- `prp-commit` — prepare commits from PRP work.
-- `e2e-testing` — plan and execute end-to-end testing workflows.
-
-## Repository Layout
-
-```text
-.agents/plugins/marketplace.json           # local marketplace metadata
-plugins/codex-skills/.codex-plugin/        # Codex plugin metadata
+plugins/codex-skills/.codex-plugin/        # plugin metadata
 plugins/codex-skills/skills/<skill>/       # individual skills
-scripts/validate-skills.sh                 # repo-level validation gate
+scripts/validate-skills.sh                 # repo validation gate
 NOTICE.md                                  # attribution and license notes
 PUBLICATION_CHECKLIST.md                   # pre-publication safety checklist
 ```
 
-A typical skill directory may include:
+Typical skill files:
 
 ```text
-SKILL.md          # required skill instructions and trigger metadata
-agents/           # optional display, grader, or helper-agent guidance
+SKILL.md          # required instructions and trigger metadata
+agents/           # optional UI/helper-agent metadata
 evals/            # task and trigger evals
 references/       # longer docs loaded on demand
 scripts/          # deterministic helper scripts
 assets/           # templates, images, fixtures, or viewer assets
 ```
 
-## Converted Skills
-
-Converted skills preserve workflow behavior from other agent-harness surfaces while keeping `skills/` as the canonical Codex surface:
-
-- Behavioral: `karpathy-guidelines`
-- Cleanup and refactoring: `refactor-cleaner`
-- Warp worktree config repair: `warp-worktree-fix`
-- Planning and implementation: `implementation-planning`, `prp-plan`, `prp-implement`
-- Validation and review: `tdd-workflow`, `build-fix`, `code-review`, `e2e-testing`
-- Goal design: `goal-grader`
-- Documentation maintenance: `update-codemaps`, `update-docs`
-- GitHub workflow: `prp-commit`, `prp-pr`
-- Meta conversion: `harness-skill-porting`
-
-Each converted skill should document its source behavior in `references/source-parity.md`.
-
 ## Validate
-
-Run the full repository validation before publishing marketplace changes:
 
 ```bash
 scripts/validate-skills.sh
 ```
 
-The validation script runs `quick_validate.py` for every skill, validates every eval JSON file with `python3 -m json.tool`, and checks that each converted skill has:
+The validator checks skill metadata, eval JSON, and release artifacts for converted skills:
 
 - `references/source-parity.md`
 - `evals/evals.json`
 - task eval assertions
-- a 20-prompt `evals/trigger_eval_<skill>.json` split into 10 positive and 10 negative trigger prompts
+- 20 trigger eval prompts split 10 positive / 10 negative
 
-Run trigger optimization with the existing `skill-creator` loop when changing a converted skill description:
-
-```bash
-python3 plugins/codex-skills/skills/skill-creator/scripts/run_loop.py \
-  --eval-set plugins/codex-skills/skills/<skill>/evals/trigger_eval_<skill>.json \
-  --skill-path plugins/codex-skills/skills/<skill> \
-  --max-iterations 3 \
-  --runs-per-query 2 \
-  --results-dir /tmp/codex-skills-trigger-optimization
-```
-
-## Add Skills
-
-Future reusable skills should live under:
-
-```text
-plugins/codex-skills/skills/<skill-name>/
-```
-
-Each skill directory should keep its `SKILL.md` at the root and place optional Codex metadata, helper scripts, references, assets, and review tooling in the conventional subdirectories (`agents/`, `scripts/`, `references/`, `assets/`, and similar).
-
-When adding or converting a skill:
+## Add Or Convert Skills
 
 1. Keep trigger guidance in `SKILL.md` frontmatter.
 2. Move long compatibility notes or examples into `references/`.
-3. Add task evals and trigger evals before treating the skill as releasable.
-4. Add or update `references/source-parity.md` when behavior came from another harness or upstream workflow.
+3. Add task evals and trigger evals before treating a skill as releasable.
+4. Add `references/source-parity.md` when behavior came from another harness or upstream workflow.
 5. Run `scripts/validate-skills.sh` before opening a PR.
 
-## Before Making This Repository Public
+Do not commit task-local `.codex/prps/` plans or reports unless they are intentional fixtures.
 
-This repository is intended to be safe to publish only after the pre-publication checklist passes. See [`PUBLICATION_CHECKLIST.md`](PUBLICATION_CHECKLIST.md).
+## Publishing
 
-Recommended release posture:
+See [`PUBLICATION_CHECKLIST.md`](PUBLICATION_CHECKLIST.md) before making this repository public.
 
-- Keep this private repository as the working copy.
-- Publish from a clean mirror or fresh branch after history and secret scanning.
-- Avoid flipping visibility directly until commit history, attribution, and private artifacts are reviewed.
+## License
 
-## License and Attribution
-
-Root project code and docs are licensed under the MIT License unless otherwise noted. Some bundled or converted content carries upstream notices or separate license terms. See [`NOTICE.md`](NOTICE.md) and per-skill `LICENSE.txt` / `references/source-parity.md` files for details.
+Root project code and docs are MIT licensed unless otherwise noted. Some bundled or converted content carries upstream notices or separate license terms. See [`NOTICE.md`](NOTICE.md) and per-skill license/source-parity files.
