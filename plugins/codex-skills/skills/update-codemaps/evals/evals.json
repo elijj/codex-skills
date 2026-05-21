@@ -1,0 +1,77 @@
+{
+  "skill_name": "update-codemaps",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/update-codemaps Refresh architecture codemaps for this repository after the auth refactor.",
+      "expected_output": "Scans repo structure, updates token-lean codemaps under docs/CODEMAPS or existing codemap directory, writes freshness markers, and reports changed/skipped files.",
+      "files": [],
+      "assertions": [
+        "Identifies project type, source roots, entry points, and major boundaries before writing codemaps.",
+        "Creates or updates architecture/backend/frontend/data/dependencies maps only when relevant.",
+        "Keeps codemaps concise with paths, symbols, tables, or ASCII diagrams instead of source dumps.",
+        "Writes or describes .reports/codemap-diff.txt with architecture changes and staleness warnings."
+      ],
+      "expectations": [
+        "Identifies project type, source roots, entry points, and major boundaries before writing codemaps.",
+        "Creates or updates architecture/backend/frontend/data/dependencies maps only when relevant.",
+        "Keeps codemaps concise with paths, symbols, tables, or ASCII diagrams instead of source dumps.",
+        "Writes or describes .reports/codemap-diff.txt with architecture changes and staleness warnings."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Generate AI-readable codemaps for a monorepo with apps/web, apps/api, and packages/db.",
+      "expected_output": "Maps workspace-level boundaries plus relevant app/package responsibilities without dumping implementation details.",
+      "files": [],
+      "assertions": [
+        "Detects monorepo shape and records app/package boundaries.",
+        "Documents frontend, backend, data, and dependency flows where present.",
+        "Uses token-lean codemap format and freshness metadata.",
+        "Skips irrelevant codemap files with a reason instead of creating empty documents."
+      ],
+      "expectations": [
+        "Detects monorepo shape and records app/package boundaries.",
+        "Documents frontend, backend, data, and dependency flows where present.",
+        "Uses token-lean codemap format and freshness metadata.",
+        "Skips irrelevant codemap files with a reason instead of creating empty documents."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Update existing codemaps, but ask before overwriting if the architecture changed a lot.",
+      "expected_output": "Drafts replacements, estimates diff size, asks before overwriting files with more than 30% change, and updates smaller diffs in place.",
+      "files": [],
+      "assertions": [
+        "Checks existing codemaps before overwriting.",
+        "Uses a 30% change threshold for approval.",
+        "Reports approval-required files clearly.",
+        "Still updates safe smaller changes and writes the codemap diff report."
+      ],
+      "expectations": [
+        "Checks existing codemaps before overwriting.",
+        "Uses a 30% change threshold for approval.",
+        "Reports approval-required files clearly.",
+        "Still updates safe smaller changes and writes the codemap diff report."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "/update-codemaps No docs/CODEMAPS directory exists, but .reports/codemaps exists from ECC.",
+      "expected_output": "Preserves the existing .reports/codemaps location instead of creating tracked docs/CODEMAPS by default.",
+      "files": [],
+      "assertions": [
+        "Detects the existing .reports/codemaps directory.",
+        "Writes codemaps to .reports/codemaps rather than creating docs/CODEMAPS.",
+        "Still writes or updates .reports/codemap-diff.txt.",
+        "Reports that the ECC generated-artifact location was preserved."
+      ],
+      "expectations": [
+        "Detects the existing .reports/codemaps directory.",
+        "Writes codemaps to .reports/codemaps rather than creating docs/CODEMAPS.",
+        "Still writes or updates .reports/codemap-diff.txt.",
+        "Reports that the ECC generated-artifact location was preserved."
+      ]
+    }
+  ]
+}

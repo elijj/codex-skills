@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Docs"
+  short_description: "Sync docs from source-of-truth files"
+  default_prompt: "Use $update-docs to sync generated documentation from source-of-truth files."

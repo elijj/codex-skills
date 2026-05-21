@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Grade this /goal before I run it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Is this a good Codex /goal prompt?",
+    "should_trigger": true
+  },
+  {
+    "query": "Optimize my /goal for a long-running Codex task.",
+    "should_trigger": true
+  },
+  {
+    "query": "Score my autonomous task objective and rewrite it safer.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use goal grader on this prompt.",
+    "should_trigger": true
+  },
+  {
+    "query": "/goal Fix the test suite until it passes. Tell me if this is ready.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this goal for stop conditions, validation, and safety gates.",
+    "should_trigger": true
+  },
+  {
+    "query": "Harden this Codex goal so it knows when to mark complete or blocked.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make this /goal safer before I hand it to an autonomous Codex session.",
+    "should_trigger": true
+  },
+  {
+    "query": "Give feedback on whether this long-running objective has enough validation and stop rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create an implementation plan for checkout refactor.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run this /goal now.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how Codex goals work.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the build errors in the current branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for bugs.",
+    "should_trigger": false
+  },
+  {
+    "query": "Commit the current changes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Turn this PRD into GitHub issues.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a normal one-turn prompt for Codex.",
+    "should_trigger": false
+  },
+  {
+    "query": "Show me the current goal status in this thread.",
+    "should_trigger": false
+  },
+  {
+    "query": "Start a new Codex goal with a 200k token budget.",
+    "should_trigger": false
+  }
+]

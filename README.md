@@ -49,6 +49,9 @@ plugins/codex-skills/skills/
 - `tdd-workflow` — use test-first implementation loops.
 - `build-fix` — fix build, typecheck, and compile errors incrementally.
 - `code-review` — review changes for correctness, maintainability, security, and test gaps.
+- `goal-grader` — grade and optimize Codex `/goal` prompts before autonomous execution.
+- `update-codemaps` — refresh token-lean architecture codemaps from repository structure.
+- `update-docs` — sync generated documentation from scripts, configs, routes, exports, and deployment sources.
 - `prp-plan` — create PRP-style implementation plans.
 - `prp-implement` — implement from PRP plans with report artifacts.
 - `prp-pr` — prepare pull requests from PRP work.
@@ -86,6 +89,8 @@ Converted skills preserve workflow behavior from other agent-harness surfaces wh
 - Warp worktree config repair: `warp-worktree-fix`
 - Planning and implementation: `implementation-planning`, `prp-plan`, `prp-implement`
 - Validation and review: `tdd-workflow`, `build-fix`, `code-review`, `e2e-testing`
+- Goal design: `goal-grader`
+- Documentation maintenance: `update-codemaps`, `update-docs`
 - GitHub workflow: `prp-commit`, `prp-pr`
 - Meta conversion: `harness-skill-porting`
 

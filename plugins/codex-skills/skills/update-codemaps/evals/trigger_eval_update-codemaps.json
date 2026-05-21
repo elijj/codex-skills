@@ -1,0 +1,22 @@
+[
+  { "query": "/update-codemaps Refresh architecture maps.", "should_trigger": true },
+  { "query": "Update codemaps for this repo.", "should_trigger": true },
+  { "query": "Generate token-lean architecture docs under docs/CODEMAPS.", "should_trigger": true },
+  { "query": "Create AI-readable maps for backend, frontend, data, and dependencies.", "should_trigger": true },
+  { "query": "Scan project structure and write codemap docs.", "should_trigger": true },
+  { "query": "Refresh codebase maps after the refactor.", "should_trigger": true },
+  { "query": "Produce compact architecture documentation for agent context.", "should_trigger": true },
+  { "query": "Update .reports/codemap-diff.txt after scanning architecture changes.", "should_trigger": true },
+  { "query": "Map routes, services, repositories, and data flow into codemaps.", "should_trigger": true },
+  { "query": "Check existing codemaps and ask before overwriting large diffs.", "should_trigger": true },
+  { "query": "/update-docs Sync generated documentation.", "should_trigger": false },
+  { "query": "Write a PRD for a new dashboard.", "should_trigger": false },
+  { "query": "Review this pull request for bugs.", "should_trigger": false },
+  { "query": "Fix build errors in the current branch.", "should_trigger": false },
+  { "query": "Commit the current changes.", "should_trigger": false },
+  { "query": "Generate API docs from OpenAPI.", "should_trigger": false },
+  { "query": "Remove unused imports and dead code.", "should_trigger": false },
+  { "query": "Create Playwright tests for checkout.", "should_trigger": false },
+  { "query": "Explain the current architecture in chat without writing files.", "should_trigger": false },
+  { "query": "Turn this implementation plan into issues.", "should_trigger": false }
+]
